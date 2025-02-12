@@ -1,0 +1,27 @@
+/**
+*   --------
+*   ICONATOR
+*   --------
+*/
+
+.icon {
+   padding: 5px;
+}
+
+.maj {
+    font-size: 1.7em;
+    font-weight: bolder;
+    color: #007bff;
+}
+
+.toCopy:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #07a;
+}
