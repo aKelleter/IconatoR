@@ -22,7 +22,6 @@ Ce projet est idéal pour les développeurs et les designers qui souhaitent int�
 2. Ouvrez le fichier `index.php` dans votre navigateur pour voir le projet en action.
 
 ## Utilisation
-Informations
 
 Il existe deux fichiers pour stocker des icônes utiles dans les applications :
 
