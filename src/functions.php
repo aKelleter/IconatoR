@@ -19,9 +19,9 @@ function generateSVG(string $symbolsFile, string $nameFile): string{
         // Écrit le contenu SVG dans le fichier public/sprites.svg
         file_put_contents($nameFile . '.svg', $svgContent);
         
-        $msg = '<p class="alert alert-warning">Le fichier '.$nameFile.'.svg a été généré avec succès.</p>';
+        $msg = '<p class="alert alert-warning">The "'.$nameFile.'.svg" file has been generated successfully.</p>';
     } else {
-        $msg = '<p class="alert alert-danger">Le fichier des icônes n\'a pas été trouvé.</p>';
+        $msg = '<p class="alert alert-danger">The icon file was not found.</p>';
     }
 
     return $msg;
@@ -71,7 +71,7 @@ function displaySVG(string $symbolsFile): string
                 $string .= '<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="40" height="40"  '.$symbol.'>';                
                 $string .=  "</svg>\n";
                 $string .=  '<div class="p-1 bg-info bg-opacity-10 border border-info rounded mb-1 p-2">' . $idValue . ' <span class="toCopy small float-end border rounded-2 btn-small btn-primary" style="padding: 2px;" data-bs-toggle="tooltip" data-bs-title="Click to copy code to clipboard">Copy</span></div>';
-                $string .=  '<div style = "display: none;" class="copyCode small border rounded p-1">&lt;svg class="icon" width="24" height="24"&gt;&lt;use xlink:href="#'.$idValue.'"&gt;&lt;/use&gt;&lt;/svg&gt;</div>';
+                $string .=  '<div style = "display: none;" class="copyCode small border rounded p-1">&lt;svg class="icon" width="24" height="24"&gt;&lt;use href="#'.$idValue.'"&gt;&lt;/use&gt;&lt;/svg&gt;</div>';
                 $string .=  "</div>\n";
                 
             }

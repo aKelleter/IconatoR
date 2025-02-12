@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>IconatoR : Sample</title>
+</head>
+<body>
+    <!-- Containers for icons-->
+    <div id="svg-icons-common" style="display: none;"></div>
+    <div id="svg-icons-application" style="display: none;"></div>
+    <!-- -- -->
+    <div class="container">        
+        <div class="row">
+            <div class="col-md-12">
+               <h1 class="text-center">Sample : Use case IconatoR</h1> 
+               <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">     
+                <h3 class="mt-5 mb-5">Some icons...</h3>
+                <div>
+                    <!-- The icons -->
+                    <svg class="icon" width="24" height="24"><use href="#home"></use></svg>
+                    <svg class="icon" width="24" height="24"><use href="#arrowRightSquare"></use></svg>
+                    <svg class="icon" width="24" height="24"><use href="#bag"></use></svg>
+                    <svg class="icon" width="24" height="24"><use href="#table"></use></svg>
+                    <svg class="icon" width="24" height="24"><use href="#people-circle"></use></svg>
+                    <!-- -- -->
+                </div>
+            </div>   
+            <hr class="mt-5 mb-5">  
+            For further information, please consult the page source code.     
+        </div>
+    </div>
+    <!-- The script that loads the two files containing the icons in “svg” 
+         format and loads them into the appropriate containers.  -->
+    <script>
+        // Charger le fichier SVG et insérer les symboles dans le DOM
+        fetch('icons-common.svg')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('svg-icons-common').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading file : icons-common.svg:', error));
+            
+        fetch('icons-application.svg')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('svg-icons-application').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading file : icons-application.svg:', error));
+    </script>
+    <!-- -- -->
+</body>
+</html>

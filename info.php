@@ -85,7 +85,7 @@
 <code class="text-primary">                     
 <pre>                          
  &lt;svg class="icon" width="24" height="24"&gt;
-    &lt;use xlink:href="#bag"&gt;&lt;/use&gt;
+    &lt;use href="#bag"&gt;&lt;/use&gt;
  &lt;/svg&gt;
 </code>                     
 </pre>                          
@@ -124,13 +124,10 @@ fetch('../../../thm/mesa/img/icons/icons-application.svg')
 &lt;div id="svg-icons-application" style="display: none;"&gt;&lt;/div&gt;
 </pre>
 </code>
-                     
-                   
-                    
-                        
-                    
+                <p>
+                    Example d'utilisation : <a href="src/sample/index.html" target="_blank">IconatoR Sample</a>
+                </p>
                 </div>
-                
             </div>
             <hr class="mb-5">
             <footer class="text-center">| <?= APP_NAME ?> | <?= APP_VER ?> | <?= APP_LICENCE ?> | <?= APP_README ?> |</footer>                      
