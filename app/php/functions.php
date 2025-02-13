@@ -1,6 +1,21 @@
 <?php
+
+/**
+ * -------------------------       
+ *        IconatoR
+ *  Application functions
+ * -------------------------
+ */
+
 declare(strict_types=1);
 
+/**
+ * Génère un fichier SVG à partir d'un fichier de symboles
+ * 
+ * @param string $symbolsFile 
+ * @param string $nameFile 
+ * @return string 
+ */
 function generateSVG(string $symbolsFile, string $nameFile): string{
 
     $msg = '';
@@ -16,8 +31,8 @@ function generateSVG(string $symbolsFile, string $nameFile): string{
         // Crée le contenu SVG final
         $svgContent = "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"display: none;\">\n $symbolsContent </svg>";
         
-        // Écrit le contenu SVG dans le fichier public/sprites.svg
-        file_put_contents($nameFile . '.svg', $svgContent);
+        // Écrit le contenu SVG dans le fichier icons/$nameFile.svg
+        file_put_contents(ICONS_PATH.$nameFile . '.svg', $svgContent);
         
         $msg = '<p class="alert alert-warning">The "'.$nameFile.'.svg" file has been generated successfully.</p>';
     } else {
@@ -36,7 +51,7 @@ function generateSVG(string $symbolsFile, string $nameFile): string{
 function displaySVG(string $symbolsFile): string
 {
     
-    // Vérifie si le fichier des symboles existe
+    // Vérifie si le fichier des symboles existe    
     if (file_exists($symbolsFile)) {
     // Charger le fichier
         $symbolsContent = file_get_contents($symbolsFile);
@@ -79,7 +94,7 @@ function displaySVG(string $symbolsFile): string
         $string .= "</div>\n";
 
     } else {
-        $string =  "Le fichier des symboles n'a pas été trouvé.";
+        $string =  "The symbol file was not found.";
     }
 
     return $string;

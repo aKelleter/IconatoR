@@ -1,18 +1,18 @@
 <?php
     // Chargement de la configuration
-    require_once 'src/conf.php';
+    require_once 'app/php/conf.php';
     // Chargement des fonctions
-    require_once 'src/functions.php';
+    require_once 'app/php/functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="src/bootstrap.min.css" rel="stylesheet">
+    <link href="app/css/bootstrap.min.css" rel="stylesheet">
     <title>IconatoR : Informations</title>
-    <link rel="shortcut icon" href="src\favicon.ico">  
-    <link type="text/css" rel="stylesheet" href="src/style.css">    
+    <link rel="shortcut icon" href="app/assets/favicon.ico">  
+    <link type="text/css" rel="stylesheet" href="app/css/style.css">    
 </head>
 <body>
     <div class="container">
@@ -33,13 +33,16 @@
             <div class="col-md-12 mb-4">      
                 <h2>ICONS APPLICATION</h2>  
                 <h3>Informations</h3>
+                <p>
+                    Example d'utilisation : <a href="app/sample/index.html" target="_blank">IconatoR Sample</a>
+                </p>
                 <div>
                     <p>
                         Il existe  deux fichiers pour stocker des icônes utiles dans les applications :
                     </p>
                     <ul>
-                        <li><b><?= PATH_SVG_FILES ?>icons-common.php</b> : Contient les icônes communes à toutes les applications, les icônes génériques</li>
-                        <li><b><?= PATH_SVG_FILES ?>icons-application.php</b> : Contient les icônes spécifiques à l'application en cours</li>
+                        <li><b><?= ICONS_PATH ?>icons-common.php</b> : Contient les icônes communes à toutes les applications, les icônes génériques</li>
+                        <li><b><?= ICONS_PATH ?>icons-application.php</b> : Contient les icônes spécifiques à l'application en cours</li>
                     </ul>
                     <p>
                         Pour ajouter une nouvelle icône dans un des deux fichiers vous coller le code SVG que vous avez copié préalablement dans le presse papier : <br>
@@ -124,9 +127,7 @@ fetch('../../../thm/mesa/img/icons/icons-application.svg')
 &lt;div id="svg-icons-application" style="display: none;"&gt;&lt;/div&gt;
 </pre>
 </code>
-                <p>
-                    Example d'utilisation : <a href="src/sample/index.html" target="_blank">IconatoR Sample</a>
-                </p>
+                
                 </div>
             </div>
             <hr class="mb-5">
